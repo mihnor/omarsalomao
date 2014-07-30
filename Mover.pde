@@ -10,7 +10,7 @@ class Mover {
   PVector velocity;
   PVector acceleration;
 
-  boolean isDead;
+  boolean isDead = false;
   float pixelRun;
 
   boolean isActive = false;
@@ -140,7 +140,7 @@ class Mover {
   }
   
     boolean checkFinger(Finger f) {
-
+println("checkFinger on mover: " + "m.location: " + this.location +" f.pos: " +   f.pos);
 
     return (this.location.dist(f.pos) < f.radius);
   }

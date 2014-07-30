@@ -1,14 +1,6 @@
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
 
-// Forces (Gravity and Fluid Resistence) with Vectors 
 
-// Demonstration of multiple force acting on bodies (Mover class)
-// Bodies experience gravity continuously
-// Bodies experience fluid resistance when in "water"
 
-// Five moving bodies
 
 // posição do vetor de sopro
 PVector baseBlow;
@@ -48,22 +40,23 @@ void draw() {
   for (int i = 0; i < movers.size(); i++) {
 
     //BLOW FUNCTION
-    
-//    Mover movers_ = movers.get(i);
-//
-//    friction(movers_);
-//    movers_.applyForce(gravity);
-//
-//
-//    // Update and display
-//    movers_.update();
-//    movers_.display();
-//    movers_.checkEdges();
+    if(!mousePressed){
+    Mover movers_ = movers.get(i);
+
+    friction(movers_);
+    movers_.applyForce(gravity);
 
 
+    // Update and display
+    movers_.update();
+    movers_.display();
+    movers_.checkEdges();
+
+    }
 //FINGERS FUNCTIONS
     movers.get(i).displayDrag();
     cursor.update();
+    
   }
 
   //  ellipse(baseBlow.x, baseBlow.y, 30, 30);
@@ -134,6 +127,9 @@ void mouseReleased() {
 void keyPressed() {
   if (key=='s') {
     saveFrame("img/"+frameCount+"omar.png");
+  }
+    if (key=='b') {
+    blow();
   }
   else if (key == CODED) {
     if (keyCode == UP) {
