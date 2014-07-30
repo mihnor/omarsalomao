@@ -1,6 +1,6 @@
 void friction(Mover m) {
 
-  float c = 0.6;
+  float c = 0.04;
   PVector friction = m.velocity.get();
   if (friction.mag() <= c) {
     float d = friction.mag();

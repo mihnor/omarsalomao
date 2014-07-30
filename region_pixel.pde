@@ -16,7 +16,7 @@ void createDots(String fileName_) {
     int x = children[i].getInt("x");
     int y = children[i].getInt("y");
     println("x: "+ x + " y: " + y);
-    movers.add(new Mover(random(1,2), x, y));
+    movers.add(new Mover(random(0.5,2), x, y));
   }
 }
 
