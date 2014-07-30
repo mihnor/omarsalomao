@@ -30,7 +30,7 @@ void setup() {
   
   image(fundo, 0, 0);
 
-  createDots("positions_170_1024.xml");
+  createDots("positions_20_1024.xml");
   noSmooth();
   baseBlow = new PVector(width/2, height);
   gravity = new PVector(0,0);
